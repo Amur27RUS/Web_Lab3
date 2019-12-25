@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="hibernate">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>model.Point</class>
+        <class>model.PointHistoryElement</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgre"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value="postgre"/>
+            <property name="hibernate.connection.password" value="postgre"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL94Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+        </properties>
+    </persistence-unit>
+</persistence>

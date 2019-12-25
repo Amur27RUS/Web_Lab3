@@ -1,0 +1,126 @@
+body {
+    background: url("background.jpg");
+    background-size: 108%;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    margin: 0px;
+}
+
+div{
+    margin: 0px;
+    border: #4bb6a7;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    border-spacing: 0;
+    border: 0px;
+}
+
+th, td{
+    border: 2px solid #4bb6a7;
+    padding: 5px;
+}
+
+div table {
+    margin-top: 4px;
+    color: #4bb6a7;
+}
+
+.container{
+    width: 725px;
+    border-radius: 3px;
+    background-color: #282c34;
+    font-size: 20px;
+    font-family: cursive;
+    color: #4bb6a7;
+    padding: 1em 0;
+    text-align: center;
+    margin: -10px auto 0px;
+}
+
+.header{
+    width: 1050px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.left{
+    float: left;
+    padding-left: 20px;
+}
+
+.center{
+
+
+}
+
+#myname {
+    color: aqua;
+}
+
+.right{
+    float: right;
+    padding-right: 20px;
+}
+
+.main{
+    position: relative;
+    height: 300px;
+    margin-top: 10px;
+
+}
+
+.ui-analog-clock {
+    width: 200px;
+}
+
+.submit-button{
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 2px solid #4bb6a7;
+    background: #d7d7d7;
+    font-family: cursive;
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+.submit-button:hover{
+    background: #4bb6a7;
+    color: white;
+}
+
+.submit-button:hover:disabled {
+    background: #d7d7d7;
+    color: grey;
+}
+
+.tableblockl{
+
+    float: left;
+    margin-left: 25px;
+}
+
+.textblockr{
+
+    float: right;
+    margin-right: 25px;
+}
+
+.textblock {
+
+    margin-top:7%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.error {
+    color: firebrick;
+    margin-top: 4px;
+    font-size: 15px;
+}

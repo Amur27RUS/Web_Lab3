@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<h:head>
+    <link rel="stylesheet" href="static/styles/main.css"/>
+    <title>Start page</title>
+</h:head>
+<h:body>
+
+    <!--ШАПКА-->
+    <div class="header container">
+        <span class="left">Group P3214</span>
+        <span class="center" id="myname">Andrey Klyuev</span>
+        <span class="right">Var: 345338</span>
+    </div>
+
+    <!--ОСНОВНОЙ БЛОК-->
+    <div class="main container">
+        <h2>Current time:</h2>
+
+        <!--ЧАСЫ С ТЕКУЩИМ ВРЕМЕНЕМ-->
+        <!--<p:clock />-->
+        <div id="time-container">
+            <script src="static/scripts/clock.js" type="text/javascript"></script>
+        </div>
+
+        <HR> </HR>
+
+        <h:form>
+            <!--ВВОД ИМЕНИ-->
+            <p:inputText required="true" placeholder="Введите ваше имя" requiredMessage="Поле не должно быть пустым" id="name" value="#{name.name}"/>
+            <!--КНОПКА ENTER SITE-->
+            <h:commandButton styleClass="submit-button" action="GoToMain" value="Enter site"/>
+        </h:form>
+    </div>
+
+</h:body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>GoToMain</from-outcome>
+            <to-view-id>/main.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/main.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>GoToStartPage</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <managed-bean>
+        <managed-bean-name>checker</managed-bean-name>
+        <managed-bean-class>beans.CheckerBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+        <managed-property>
+            <property-name>bean</property-name>
+            <property-class>beans.DataBean</property-class>
+            <value>#{data}</value>
+        </managed-property>
+        <managed-property>
+            <property-name>userNameBean</property-name>
+            <property-class>beans.UserNameBean</property-class>
+            <value>#{name}</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean eager="true">
+        <managed-bean-name>data</managed-bean-name>
+        <managed-bean-class>beans.DataBean</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>name</managed-bean-name>
+        <managed-bean-class>beans.UserNameBean</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+</faces-config>
