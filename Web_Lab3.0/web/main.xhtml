@@ -107,23 +107,13 @@
                     <f:facet name="header">
                         X
                     </f:facet>
-                    <h:panelGroup rendered="#{!p.edit}">
                         ${p.x}
-                    </h:panelGroup>
-                    <p:inputText rendered="#{p.edit}" value="#{p.xEdit}" styleClass="change-input" required="true">
-                        <f:validateDoubleRange minimum="-5.0" maximum="5.0"/>
-                    </p:inputText>
                 </h:column>
                 <h:column>
                     <f:facet name="header">
                         Y
                     </f:facet>
-                    <h:panelGroup rendered="#{!p.edit}">
-                        ${p.y}
-                    </h:panelGroup>
-                    <p:inputText rendered="#{p.edit}" value="#{p.yEdit}" styleClass="change-input" required="true">
-                        <f:validateDoubleRange minimum="-3.0" maximum="3.0"/>
-                    </p:inputText>
+                        ${p.y}                 
                 </h:column>
                 <h:column>
                     <f:facet name="header">
