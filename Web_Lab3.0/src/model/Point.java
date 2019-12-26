@@ -18,14 +18,6 @@ public class Point {
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "point")
     private Set<PointHistoryElement> pointHistoryElements;
 
-    @Transient
-    private boolean edit = false;
-    @Transient
-    private double xEdit;
-    @Transient
-    private double yEdit;
-
-
 
     public Point(Double r, String owner){
 
@@ -75,31 +67,5 @@ public class Point {
 
     public void addHistoryElement(PointHistoryElement element){
         pointHistoryElements.add(element);
-    }
-
-    public boolean isEdit() {
-        return edit;
-    }
-
-    public void setEdit(boolean edit) {
-        this.edit = edit;
-    }
-
-    public double getxEdit() {
-        xEdit = getX();
-        return xEdit;
-    }
-
-    public double getyEdit() {
-        yEdit = getY();
-        return yEdit;
-    }
-
-    public void setxEdit(double xEdit) {
-        this.xEdit = xEdit;
-    }
-
-    public void setyEdit(double yEdit) {
-        this.yEdit = yEdit;
     }
 }
